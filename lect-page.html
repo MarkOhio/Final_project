@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeMark WhatsApp TV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR SECTION -->
+    <header class="header" id="navbar">
+        <div class="mobileHeader">
+          <img id="logo" src="pic/logo.png" alt="logo"  width="100px" height="100px">
+          <button onclick={openMenu()} class="hamburger">  <img src="pic/ham.png" alt="" width="30px" height="30px"></button>
+         
+        </div>
+        <nav class="menu">
+          <ul class="list">
+            <li class="listItem"><a href="index.html">home</a></li>
+            
+          </ul>
+        </nav>
+      </header>
+<!-- NAVBAR SECTION end-->
+<div class="space"  ></div>
+<!-- SIGN UP SECT -->
+<div class="sign">
+  
+    <a href="#"><div class="stud">
+        <p>Student Attendance </p>
+    </div></a>
+
+    <a href="#"></a><div class="stud">
+        <p>Result Upload</p>
+    </div></a>
+
+    <a href="#"></a><div class="stud">
+        <p><a href="#">Time Table</a></p>
+    </div></a>
+</div>
+
+<footer class="footer2">
+  <div class="" style="font-size: 10px;">
+    @DeMark TV,   All Rights Reserved
+  </div>
+  <div class="">
+    Designed by <a href="" style="color: blue;">Mark O. Ohio</a>
+  </div>
+  </footer>
+</body>
+
+<script>
+    // NAV MENU
+        const menu = document.querySelector(".menu");
+    let open;
+    
+    function openMenu() {
+      if (open) {
+        menu.style.display = "none";
+        open = false;
+      } else if (!open) {
+        menu.style.display = "block";
+        open = true;
+      }
+    }
+      </script>
+
+     
+</html>

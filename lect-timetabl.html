@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeMark WhatsApp TV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    #myInput1 {
+      background-image: url('../css/searchicon.png');
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
+    
+    #myTable1 {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #ddd;
+      font-size: 18px;
+    }
+    
+    #myTable1 th, #myTable1 td {
+      text-align: left;
+      padding: 12px;
+    }
+    
+    #myTable1 tr {
+      border-bottom: 1px solid #ddd;
+    }
+    
+    #myTable1 tr.header1, #myTable1 tr:hover {
+      background-color: #f1f1f1;
+    }
+    </style>
+<body>
+    <!-- NAVBAR SECTION -->
+    <header class="header" id="navbar">
+        <div class="mobileHeader">
+          <img id="logo" src="pic/logo.png" alt="logo"  width="100px" height="100px">
+          <button onclick={openMenu()} class="hamburger">  <img src="pic/ham.png" alt="" width="30px" height="30px"></button>
+         
+        </div>
+        <nav class="menu">
+          <ul class="list">
+            <li class="listItem"><a href="index.html">home</a></li>
+            <li><a href="signin.html">Login</a></li>
+             
+          </ul>
+        </nav>
+      </header>
+<!-- NAVBAR SECTION end-->
+
+
+<center><h2>lectures</h2></center>
+
+<input type="text" id="myInput1" onkeyup="myFunction()" placeholder="Search for Courses.." title="Type in a name">
+
+<table id="myTable1">
+  <tr class="header1">
+    <th style="width:50%;">Course</th>
+    <th style="width:20%;">Day</th>
+    <th style="width:30%;">Time</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbkop</td>
+    <td>Sweden</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Koniglich Essen</td>
+    <td>Germany</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Canada</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Italy</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>North/South</td>
+    <td>UK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Paris specialites com233</td>
+    <td>France</td>
+    <td>1:30 pm</td>
+  </tr>
+</table>
+
+</body>
+
+<script>
+    // NAV MENU
+        const menu = document.querySelector(".menu");
+    let open;
+    
+    function openMenu() {
+      if (open) {
+        menu.style.display = "none";
+        open = false;
+      } else if (!open) {
+        menu.style.display = "block";
+        open = true;
+      }
+    }
+      </script>
+
+<script>
+    function myFunction() {
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput1");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable1");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
+    
+</html>

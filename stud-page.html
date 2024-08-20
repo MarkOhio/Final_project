@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    html{
+        background-color: #3d0c3d;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.profile-section {
+    width: 30%;
+    background-color: white;
+    margin-left: -20px;
+    border-bottom-right-radius: 20px ;
+    padding: 20px;
+    color: black;
+    font-weight: 400;
+}
+
+.profile-pic {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.profile-info {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.buttons-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 60%;
+}
+
+.btn {
+    width: 45%;
+    padding: 20px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+.btn{
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover {
+  background-color: #FFC229;
+  box-shadow: #FF6314 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.btn:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+    .btn{
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+    text-align: center;
+    justify-content: center;
+  }
+  .btn:active {
+  transform: scale(0.025);
+}
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-section {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+
+
+   
+ 
+    border-radius: 30px ;
+  margin-left: 10px;
+  margin-bottom: 20px;
+    }
+
+    .profile-pic {
+        width: 50%;
+        height: 200px;
+    }
+
+    .profile-info {
+        width: 80%;
+        font-size: 17px;
+    }
+
+    .buttons-section {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar .logo {
+        margin-bottom: 10px;
+    }
+
+    .navbar .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+</style>
+<body>
+    <!-- NAVBAR SECTION -->
+    <header class="header" id="navbar">
+        <div class="mobileHeader">
+          <img id="logo" src="pic/logo.png" alt="logo"  width="100px" height="100px">
+          <button onclick={openMenu()} class="hamburger">  <img src="pic/ham.png" alt="" width="30px" height="30px"></button>
+         
+        </div>
+        <nav class="menu">
+          <ul class="list">
+            <li class="listItem"><a href="index.html">home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Help</a></li>
+            <li class="listItem"><a href="signin.html">Logout</a></li>
+            
+          </ul>
+        </nav>
+      </header>
+<!-- NAVBAR SECTION end-->
+
+
+ 
+    <main class="main-content">
+        <div class="profile-section">
+            <img src="pic/avater.jpg" alt="Profile Picture" class="profile-pic"  height="450px">
+            <div class="profile-info">
+                <p>Name: John Doe</p>
+                <p>Matric Number: 123456</p>
+                <p>Department: Computer Science</p>
+            </div>
+        </div>
+        <div class="buttons-section">
+            <button class="btn">Timetable</button>
+            <button class="btn">Results</button>
+            <button class="btn">Online Class</button>
+            <button class="btn">Payment Details</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // NAV MENU
+            const menu = document.querySelector(".menu");
+        let open;
+        
+        function openMenu() {
+          if (open) {
+            menu.style.display = "none";
+            open = false;
+          } else if (!open) {
+            menu.style.display = "block";
+            open = true;
+          }
+        }
+          </script><script>
+    // NAV MENU
+        const menu = document.querySelector(".menu");
+    let open;
+    
+    function openMenu() {
+      if (open) {
+        menu.style.display = "none";
+        open = false;
+      } else if (!open) {
+        menu.style.display = "block";
+        open = true;
+      }
+    }
+      </script>
+</body>
+</html>
